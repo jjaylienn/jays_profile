@@ -1,0 +1,2033 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Portfolio | Jaylien</title>
+
+    <!-- =========================
+         GOOGLE FONTS
+    ========================= -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- =========================
+         FONT AWESOME
+    ========================= -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- =========================
+         FAVICON
+    ========================= -->
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="logo.png"
+    >
+
+
+    <style>
+
+        /* =========================
+           GENERAL
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --pink: #ff69a6;
+            --light-pink: #ffd6e7;
+            --soft-pink: #fff0f6;
+            --dark-pink: #d63384;
+            --white: #ffffff;
+            --text: #5a4050;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--soft-pink);
+            color: var(--text);
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(10px);
+
+            box-shadow:
+                0 3px 15px rgba(214, 51, 132, 0.15);
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 15px 25px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Great Vibes', cursive;
+            font-size: 32px;
+            color: var(--dark-pink);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text);
+            font-size: 14px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--pink);
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            padding: 100px 20px 50px;
+
+            background:
+                radial-gradient(
+                    circle at top left,
+                    #ffd1e3,
+                    transparent 35%
+                ),
+                radial-gradient(
+                    circle at bottom right,
+                    #ffc1dc,
+                    transparent 35%
+                ),
+                var(--soft-pink);
+        }
+
+        .hero-content {
+            max-width: 750px;
+        }
+
+        .profile-picture {
+            width: 180px;
+            height: 180px;
+
+            object-fit: cover;
+            border-radius: 50%;
+
+            border: 7px solid white;
+
+            box-shadow:
+                0 8px 30px rgba(214, 51, 132, 0.25);
+
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 70px;
+            color: var(--dark-pink);
+        }
+
+        .hero h2 {
+            font-size: 22px;
+            margin: 10px 0;
+            color: var(--pink);
+        }
+
+        .hero p {
+            margin: 15px auto 25px;
+            max-width: 600px;
+            line-height: 1.8;
+        }
+
+        .btn {
+            display: inline-block;
+
+            padding: 12px 25px;
+
+            background: var(--pink);
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 30px;
+
+            font-weight: 600;
+
+            box-shadow:
+                0 5px 15px rgba(255, 105, 166, 0.3);
+
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            background: var(--dark-pink);
+        }
+
+
+        /* =========================
+           SECTIONS
+        ========================= */
+
+        section {
+            padding: 90px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 50px;
+            color: var(--dark-pink);
+        }
+
+        .section-title p {
+            color: #947080;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about-box {
+            background: white;
+
+            padding: 40px;
+
+            border-radius: 25px;
+
+            box-shadow:
+                0 8px 25px rgba(214, 51, 132, 0.1);
+
+            text-align: center;
+
+            line-height: 1.9;
+        }
+
+
+        /* =========================
+           GENERAL CARDS
+        ========================= */
+
+        .cards {
+            display: grid;
+
+            grid-template-columns:
+                repeat(
+                    auto-fit,
+                    minmax(220px, 1fr)
+                );
+
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+
+            padding: 30px 20px;
+
+            border-radius: 25px;
+
+            text-align: center;
+
+            box-shadow:
+                0 8px 25px rgba(214, 51, 132, 0.1);
+
+            transition: 0.3s;
+
+            border: 2px solid transparent;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: var(--light-pink);
+        }
+
+        .card .icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: var(--dark-pink);
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+
+        /* =========================
+           SKILLS
+        ========================= */
+
+        .skills-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(
+                    auto-fit,
+                    minmax(200px, 1fr)
+                );
+
+            gap: 25px;
+        }
+
+        .skill-card {
+            background: white;
+
+            padding: 30px 20px;
+
+            border-radius: 25px;
+
+            text-align: center;
+
+            box-shadow:
+                0 8px 25px rgba(214, 51, 132, 0.1);
+
+            border: 2px solid transparent;
+
+            transition: 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-8px);
+
+            border-color: var(--light-pink);
+
+            box-shadow:
+                0 12px 30px rgba(214, 51, 132, 0.18);
+        }
+
+        .skill-icon {
+            width: 70px;
+            height: 70px;
+
+            margin: 0 auto 18px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: var(--soft-pink);
+
+            border-radius: 20px;
+
+            font-size: 35px;
+        }
+
+        .skill-card h3 {
+            color: var(--dark-pink);
+
+            margin-bottom: 10px;
+
+            font-size: 19px;
+        }
+
+        .skill-card p {
+            font-size: 13px;
+
+            line-height: 1.7;
+
+            color: #765c6a;
+        }
+
+        .skill-tags {
+            margin-top: 12px;
+        }
+
+        .skill-tag {
+            display: inline-block;
+
+            background: var(--light-pink);
+
+            color: var(--dark-pink);
+
+            padding: 5px 10px;
+
+            border-radius: 15px;
+
+            font-size: 11px;
+
+            margin: 3px;
+
+            font-weight: 500;
+        }
+
+
+        /* =========================
+           PROJECTS
+        ========================= */
+
+        .project-card {
+            background: white;
+
+            border-radius: 25px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 8px 25px rgba(214, 51, 132, 0.1);
+
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 180px;
+
+            object-fit: cover;
+
+            background: #ffd6e7;
+        }
+
+        .project-content {
+            padding: 25px;
+        }
+
+        .project-content h3 {
+            color: var(--dark-pink);
+            margin-bottom: 10px;
+        }
+
+        .project-content p {
+            font-size: 14px;
+
+            line-height: 1.7;
+
+            margin-bottom: 15px;
+        }
+
+        .tag {
+            display: inline-block;
+
+            background: var(--light-pink);
+
+            color: var(--dark-pink);
+
+            padding: 5px 12px;
+
+            border-radius: 20px;
+
+            font-size: 12px;
+
+            margin: 3px;
+        }
+
+
+        /* =========================
+           FAVORITE SERIES
+           FLIP CARDS
+        ========================= */
+
+        .series-card {
+            height: 390px;
+
+            perspective: 1000px;
+
+            cursor: pointer;
+        }
+
+        .series-card-inner {
+            position: relative;
+
+            width: 100%;
+            height: 100%;
+
+            transition:
+                transform 0.8s ease;
+
+            transform-style: preserve-3d;
+        }
+
+        .series-card.flipped .series-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .series-card-front,
+        .series-card-back {
+            position: absolute;
+
+            width: 100%;
+            height: 100%;
+
+            border-radius: 25px;
+
+            overflow: hidden;
+
+            backface-visibility: hidden;
+
+            -webkit-backface-visibility: hidden;
+
+            box-shadow:
+                0 8px 25px rgba(214, 51, 132, 0.15);
+        }
+
+
+        /* FRONT */
+
+        .series-card-front {
+            background: white;
+        }
+
+        .series-card-front img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+        }
+
+        .series-title {
+            position: absolute;
+
+            bottom: 0;
+            left: 0;
+
+            width: 100%;
+
+            padding:
+                30px
+                15px
+                20px;
+
+            background:
+                linear-gradient(
+                    transparent,
+                    rgba(214, 51, 132, 0.95)
+                );
+
+            color: white;
+
+            text-align: center;
+        }
+
+        .series-title h3 {
+            font-size: 22px;
+            margin: 0;
+        }
+
+        .flip-hint {
+            font-size: 11px;
+
+            margin-top: 5px;
+
+            opacity: 0.9;
+        }
+
+
+        /* BACK */
+
+        .series-card-back {
+            background:
+                linear-gradient(
+                    135deg,
+                    #ffd6e7,
+                    #fff0f6,
+                    #ffe3ef
+                );
+
+            transform: rotateY(180deg);
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            align-items: center;
+
+            padding: 30px;
+
+            text-align: center;
+        }
+
+        .series-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .series-card-back h3 {
+            color: var(--dark-pink);
+
+            font-size: 24px;
+
+            margin-bottom: 15px;
+        }
+
+        .series-card-back p {
+            font-size: 14px;
+
+            line-height: 1.8;
+
+            color: var(--text);
+        }
+
+        .back-hint {
+            margin-top: 20px;
+
+            font-size: 11px;
+
+            color: #b46b8c;
+        }
+
+
+        /* =========================
+           SOCIAL MEDIA
+        ========================= */
+
+        .social-section {
+            text-align: center;
+
+            padding: 80px 20px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #fff0f6,
+                    #ffd6e7
+                );
+        }
+
+        .social-section h2 {
+            font-family: 'Great Vibes', cursive;
+
+            font-size: 50px;
+
+            color: var(--dark-pink);
+
+            margin-bottom: 10px;
+        }
+
+        .social-section p {
+            color: #947080;
+
+            margin-bottom: 35px;
+        }
+
+        .social-links {
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            gap: 35px;
+
+            flex-wrap: wrap;
+        }
+
+        .social-item {
+            text-align: center;
+        }
+
+        .social-link {
+            width: 70px;
+            height: 70px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            background: white;
+
+            color: var(--dark-pink);
+
+            border-radius: 50%;
+
+            text-decoration: none;
+
+            font-size: 32px;
+
+            border:
+                2px solid var(--light-pink);
+
+            box-shadow:
+                0 8px 25px
+                rgba(214, 51, 132, 0.15);
+
+            transition: 0.3s ease;
+        }
+
+        .social-link:hover {
+            transform:
+                translateY(-8px)
+                scale(1.08);
+
+            background: var(--dark-pink);
+
+            color: white;
+
+            box-shadow:
+                0 12px 30px
+                rgba(214, 51, 132, 0.3);
+        }
+
+        .social-name {
+            display: block;
+
+            margin-top: 10px;
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            color: var(--dark-pink);
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            text-align: center;
+
+            padding: 35px 20px;
+
+            background: #ffd6e7;
+
+            color: var(--dark-pink);
+        }
+
+        footer p {
+            margin: 5px;
+        }
+
+        footer .heart {
+            color: #ff4d94;
+        }
+
+
+        /* =========================
+           FLOATING DECORATIONS
+        ========================= */
+
+        .floating {
+            position: fixed;
+
+            font-size: 25px;
+
+            animation:
+                float 5s infinite ease-in-out;
+
+            opacity: 0.5;
+
+            pointer-events: none;
+
+            z-index: 999;
+        }
+
+        .one {
+            top: 20%;
+            left: 5%;
+        }
+
+        .two {
+            top: 70%;
+            right: 5%;
+
+            animation-delay: 1s;
+        }
+
+        .three {
+            top: 45%;
+            right: 10%;
+
+            animation-delay: 2s;
+        }
+
+        @keyframes float {
+
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 768px) {
+
+            .nav-container {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .nav-links {
+                gap: 10px;
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+            .nav-links a {
+                font-size: 12px;
+            }
+
+            .hero h1 {
+                font-size: 55px;
+            }
+
+            .hero h2 {
+                font-size: 18px;
+            }
+
+            .profile-picture {
+                width: 150px;
+                height: 150px;
+            }
+
+            .section-title h2 {
+                font-size: 42px;
+            }
+
+            .social-section h2 {
+                font-size: 42px;
+            }
+
+            .series-card {
+                height: 350px;
+            }
+
+            .about-box {
+                padding: 25px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         FLOATING DECORATIONS
+    ========================= -->
+
+    <div class="floating one">
+        🌸
+    </div>
+
+    <div class="floating two">
+        🎀
+    </div>
+
+    <div class="floating three">
+        💗
+    </div>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
+
+    <nav>
+
+        <div class="nav-container">
+
+            <div class="logo">
+                Jaylien ♡
+            </div>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="#home">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#about">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#hobbies">
+                        Hobbies
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#skills">
+                        Skills
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#interests">
+                        Interests
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#projects">
+                        Projects
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#series">
+                        Series
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#social">
+                        Social
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <img
+                src="profile.jpg"
+                alt="Jaylien's Picture"
+                class="profile-picture"
+            >
+
+            <h1>
+                Hello, I'm Jaylien!
+            </h1>
+
+            <h2>
+                Graduating Computer Science Student 💻🌸
+            </h2>
+
+            <p>
+                Welcome to my personal portfolio!
+                This website is a little collection of
+                my interests, hobbies, skills, and projects.
+            </p>
+
+            <a
+                href="#about"
+                class="btn"
+            >
+                Explore My Portfolio ♡
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT
+    ========================= -->
+
+    <section id="about">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>
+                    About Me 🌷
+                </h2>
+
+                <p>
+                    A little something about me
+                </p>
+
+            </div>
+
+
+            <div class="about-box">
+
+                <p>
+
+                    Hi! I'm
+                    <strong>Jaylien</strong>,
+                    a graduating Bachelor of Science in
+                    Computer Science student at
+                    <strong>
+                        St. Rose College Educational Foundation, Inc.
+                    </strong>
+
+                    Most people call me
+                    <strong>Jay</strong>,
+                    and because of my name, I’m often mistaken
+                    for a guy, which I find quite funny.
+
+                    I’m also the
+                    <strong>
+                        eldest among three siblings
+                    </strong>,
+                    which has taught me to be responsible,
+                    patient, and dependable.
+
+                </p>
+
+                <br>
+
+                <p>
+
+                    Outside of school, I enjoy simple things
+                    that make me happy.
+
+                    My comfort food is
+                    <strong>
+                        fries and strawberry matcha
+                    </strong>,
+
+                    and whenever I’m bored, I usually play
+                    online games like
+                    <strong>
+                        Call of Duty: Mobile (CODM)
+                    </strong>
+                    and
+                    <strong>
+                        Mobile Legends (ML)
+                    </strong>.
+
+                    These little things help me relax
+                    and enjoy my free time.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         HOBBIES
+    ========================= -->
+
+    <section id="hobbies">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>
+                    My Hobbies 🎀
+                </h2>
+
+                <p>
+                    Things I enjoy doing in my free time
+                </p>
+
+            </div>
+
+
+            <div class="cards">
+
+
+                <!-- PHOTOGRAPHY -->
+
+                <div class="card">
+
+                    <div class="icon">
+                        📸
+                    </div>
+
+                    <h3>
+                        Photography
+                    </h3>
+
+                    <p>
+                        I enjoy taking pictures of beautiful
+                        places, skies, sunsets, and random
+                        moments that make me say,
+                        “Wait… this needs to be on my camera roll.”
+                    </p>
+
+                </div>
+
+
+                <!-- MUSIC -->
+
+                <div class="card">
+
+                    <div class="icon">
+                        🎧
+                    </div>
+
+                    <h3>
+                        Listening to Music
+                    </h3>
+
+                    <p>
+                        Whenever I need to release someone
+                        from my heart, I put on my headphones
+                        and let the music do the emotional work.
+                        Basically, my playlist knows the whole story.
+                    </p>
+
+                </div>
+
+
+                <!-- SERIES -->
+
+                <div class="card">
+
+                    <div class="icon">
+                        🎬
+                    </div>
+
+                    <h3>
+                        Watching Series
+                    </h3>
+
+                    <p>
+                        I enjoy watching interesting series
+                        during my free time, especially when
+                        I need something to binge-watch.
+                    </p>
+
+                </div>
+
+
+                <!-- EDITING -->
+
+                <div class="card">
+
+                    <div class="icon">
+                        💻
+                    </div>
+
+                    <h3>
+                        Editing
+                    </h3>
+
+                    <p>
+                        I enjoy editing pictures and creating
+                        simple posters using Canva and other
+                        editing tools.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SKILLS
+    ========================= -->
+
+    <section id="skills">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>
+                    My Skills 💻
+                </h2>
+
+                <p>
+                    Tools and skills I have learned along the way
+                </p>
+
+            </div>
+
+
+            <div class="skills-grid">
+
+
+                <!-- PROGRAMMING -->
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">
+                        💻
+                    </div>
+
+                    <h3>
+                        Programming
+                    </h3>
+
+                    <p>
+                        I have basic knowledge in programming
+                        and enjoy creating simple programs
+                        and websites.
+                    </p>
+
+                    <div class="skill-tags">
+
+                        <span class="skill-tag">
+                            HTML
+                        </span>
+
+                        <span class="skill-tag">
+                            CSS
+                        </span>
+
+                        <span class="skill-tag">
+                            JavaScript
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- WEB DEVELOPMENT -->
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">
+                        🌐
+                    </div>
+
+                    <h3>
+                        Web Development
+                    </h3>
+
+                    <p>
+                        I enjoy designing and building simple,
+                        responsive, and user-friendly websites.
+                    </p>
+
+                    <div class="skill-tags">
+
+                        <span class="skill-tag">
+                            HTML
+                        </span>
+
+                        <span class="skill-tag">
+                            CSS
+                        </span>
+
+                        <span class="skill-tag">
+                            Web Design
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- GRAPHIC DESIGN -->
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">
+                        🎨
+                    </div>
+
+                    <h3>
+                        Graphic Design
+                    </h3>
+
+                    <p>
+                        I enjoy creating presentations,
+                        posters, layouts, and other
+                        visual content.
+                    </p>
+
+                    <div class="skill-tags">
+
+                        <span class="skill-tag">
+                            Canva
+                        </span>
+
+                        <span class="skill-tag">
+                            Editing
+                        </span>
+
+                        <span class="skill-tag">
+                            Layout
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- MICROSOFT OFFICE -->
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">
+                        📄
+                    </div>
+
+                    <h3>
+                        Microsoft Office
+                    </h3>
+
+                    <p>
+                        I can create and organize documents,
+                        presentations, and spreadsheets for
+                        academic and personal projects.
+                    </p>
+
+                    <div class="skill-tags">
+
+                        <span class="skill-tag">
+                            Word
+                        </span>
+
+                        <span class="skill-tag">
+                            PowerPoint
+                        </span>
+
+                        <span class="skill-tag">
+                            Excel
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TEAMWORK -->
+
+                <div class="skill-card">
+
+                    <div class="skill-icon">
+                        🤝
+                    </div>
+
+                    <h3>
+                        Teamwork
+                    </h3>
+
+                    <p>
+                        I can work with others, share ideas,
+                        communicate, and contribute to
+                        group projects.
+                    </p>
+
+                    <div class="skill-tags">
+
+                        <span class="skill-tag">
+                            Communication
+                        </span>
+
+                        <span class="skill-tag">
+                            Collaboration
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         INTERESTS
+    ========================= -->
+
+    <section id="interests">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>
+                    My Interests 💕
+                </h2>
+
+                <p>
+                    Things that inspire and excite me
+                </p>
+
+            </div>
+
+
+            <div class="cards">
+
+
+                <!-- TECHNOLOGY -->
+
+                <div class="card">
+
+                    <div class="icon">
+                        🤖
+                    </div>
+
+                    <h3>
+                        Technology
+                    </h3>
+
+                    <p>
+                        Exploring new technologies and
+                        discovering how they can solve
+                        everyday problems.
+                    </p>
+
+                </div>
+
+
+                <!-- WEB DEVELOPMENT -->
+
+                <div class="card">
+
+                    <div class="icon">
+                        🌐
+                    </div>
+
+                    <h3>
+                        Web Development
+                    </h3>
+
+                    <p>
+                        Creating websites and learning
+                        how web technologies work.
+                    </p>
+
+                </div>
+
+
+                <!-- DESIGN -->
+
+                <div class="card">
+
+                    <div class="icon">
+                        🎨
+                    </div>
+
+                    <h3>
+                        Design
+                    </h3>
+
+                    <p>
+                        Creating attractive and
+                        user-friendly digital designs.
+                    </p>
+
+                </div>
+
+
+                <!-- LEARNING -->
+
+                <div class="card">
+
+                    <div class="icon">
+                        📚
+                    </div>
+
+                    <h3>
+                        Learning
+                    </h3>
+
+                    <p>
+                        Continuously learning new skills
+                        and improving my knowledge.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PROJECTS
+    ========================= -->
+
+    <section id="projects">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>
+                    My Projects 🌸
+                </h2>
+
+                <p>
+                    Some of the projects I have worked on
+                </p>
+
+            </div>
+
+
+            <div class="cards">
+
+
+                <!-- PROJECT 1 -->
+
+                <div class="project-card">
+
+                    <img
+                        src="project1.jpg"
+                        alt="Certificate Project"
+                        class="project-image"
+                    >
+
+                    <div class="project-content">
+
+                        <h3>
+                            Certificate
+                        </h3>
+
+                        <p>
+                            A certificate layout created in
+                            Adobe Photoshop for events,
+                            trainings, and recognition. It
+                            features a clean and elegant design
+                            using typography, shapes, and
+                            color balance.
+                        </p>
+
+                        <span class="tag">
+                            Photoshop
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PROJECT 2 -->
+
+                <div class="project-card">
+
+                    <img
+                        src="project2.jpg"
+                        alt="Vending Machine Project"
+                        class="project-image"
+                    >
+
+                    <div class="project-content">
+
+                        <h3>
+                            Coin-Operated Yellow Paper
+                            Vending Machine
+                        </h3>
+
+                        <p>
+                            An Arduino-based machine designed
+                            to provide students with yellow paper
+                            through a coin-operated system.
+                        </p>
+
+                        <span class="tag">
+                            Arduino
+                        </span>
+
+                        <span class="tag">
+                            C++
+                        </span>
+
+                        <span class="tag">
+                            Hardware
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PROJECT 3 -->
+
+                <div class="project-card">
+
+                    <img
+                        src="project3.jpg"
+                        alt="Modern Two-Storey House"
+                        class="project-image"
+                    >
+
+                    <div class="project-content">
+
+                        <h3>
+                            Modern Two-Storey House
+                        </h3>
+
+                        <p>
+                            A 3D architectural model of a
+                            modern two-storey house created
+                            in SketchUp. It includes the
+                            exterior design, color scheme,
+                            and surrounding details.
+                        </p>
+
+                        <span class="tag">
+                            SketchUp
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FAVORITE SERIES
+         FLIP CARDS
+    ========================= -->
+
+    <section id="series">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>
+                    Favorite Series 📺
+                </h2>
+
+                <p>
+                    Click the cards to discover more 💗
+                </p>
+
+            </div>
+
+
+            <div class="cards">
+
+
+                <!-- =====================
+                     SERIES 1
+                ====================== -->
+
+                <div
+                    class="series-card"
+                    onclick="flipCard(this)"
+                >
+
+                    <div class="series-card-inner">
+
+
+                        <!-- FRONT -->
+
+                        <div class="series-card-front">
+
+                            <img
+                                src="series1.jpg"
+                                alt="The Penthouse"
+                            >
+
+                            <div class="series-title">
+
+                                <h3>
+                                    The Penthouse
+                                </h3>
+
+                                <div class="flip-hint">
+                                    ✨ Click to flip ✨
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- BACK -->
+
+                        <div class="series-card-back">
+
+                            <div class="series-icon">
+                                🎬
+                            </div>
+
+                            <h3>
+                                The Penthouse
+                            </h3>
+
+                            <p>
+                                A Korean drama about wealthy
+                                families living in a luxurious
+                                apartment complex. It follows
+                                their ambition, secrets, rivalries,
+                                and the intense lengths they go to
+                                for success, status, and their
+                                children's future.
+                            </p>
+
+                            <div class="back-hint">
+                                💗 Click again to return
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+                <!-- =====================
+                     SERIES 2
+                ====================== -->
+
+                <div
+                    class="series-card"
+                    onclick="flipCard(this)"
+                >
+
+                    <div class="series-card-inner">
+
+
+                        <!-- FRONT -->
+
+                        <div class="series-card-front">
+
+                            <img
+                                src="series2.jpg"
+                                alt="Pinocchio"
+                            >
+
+                            <div class="series-title">
+
+                                <h3>
+                                    Pinocchio
+                                </h3>
+
+                                <div class="flip-hint">
+                                    ✨ Click to flip ✨
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- BACK -->
+
+                        <div class="series-card-back">
+
+                            <div class="series-icon">
+                                🍿
+                            </div>
+
+                            <h3>
+                                Pinocchio
+                            </h3>
+
+                            <p>
+                                A Korean drama about young
+                                reporters who pursue the truth
+                                while dealing with the consequences
+                                of irresponsible journalism. It
+                                explores love, family, justice,
+                                and the importance of telling
+                                the truth.
+                            </p>
+
+                            <div class="back-hint">
+                                💗 Click again to return
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+                <!-- =====================
+                     SERIES 3
+                ====================== -->
+
+                <div
+                    class="series-card"
+                    onclick="flipCard(this)"
+                >
+
+                    <div class="series-card-inner">
+
+
+                        <!-- FRONT -->
+
+                        <div class="series-card-front">
+
+                            <img
+                                src="series3.jpg"
+                                alt="Twinkling Watermelon"
+                            >
+
+                            <div class="series-title">
+
+                                <h3>
+                                    Twinkling Watermelon
+                                </h3>
+
+                                <div class="flip-hint">
+                                    ✨ Click to flip ✨
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- BACK -->
+
+                        <div class="series-card-back">
+
+                            <div class="series-icon">
+                                💗
+                            </div>
+
+                            <h3>
+                                Twinkling Watermelon
+                            </h3>
+
+                            <p>
+                                A coming-of-age Korean drama
+                                about a talented young musician
+                                who travels back in time and meets
+                                his parents when they were teenagers.
+                                It combines music, friendship,
+                                family, dreams, and time travel
+                                in a heartfelt story.
+                            </p>
+
+                            <div class="back-hint">
+                                💗 Click again to return
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SOCIAL MEDIA
+    ========================= -->
+
+    <section
+        class="social-section"
+        id="social"
+    >
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>
+                    Let's Connect 💕
+                </h2>
+
+                <p>
+                    Follow me and let's stay connected ✨
+                </p>
+
+            </div>
+
+
+            <div class="social-links">
+
+
+                <!-- INSTAGRAM -->
+
+                <div class="social-item">
+
+                    <a
+                        href="https://www.instagram.com/jaylienrge?igsh=bmk1ZzN4bnd6cGg="
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="social-link"
+                        aria-label="Instagram"
+                    >
+
+                        <i class="fa-brands fa-instagram"></i>
+
+                    </a>
+
+                    <span class="social-name">
+                        Instagram
+                    </span>
+
+                </div>
+
+
+                <!-- FACEBOOK -->
+
+                <div class="social-item">
+
+                    <a
+                        href="https://www.facebook.com/jayliennnn?mibextid=rS40aB7S9Ucbxw6v"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="social-link"
+                        aria-label="Facebook"
+                    >
+
+                        <i class="fa-brands fa-facebook-f"></i>
+
+                    </a>
+
+                    <span class="social-name">
+                        Facebook
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <p>
+
+            Made with
+
+            <span class="heart">
+                ♥
+            </span>
+
+            by Jaylien
+
+        </p>
+
+        <p>
+
+            © 2026 My Portfolio.
+            All Rights Reserved.
+
+        </p>
+
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
+
+    <script>
+
+        function flipCard(card) {
+
+            card.classList.toggle("flipped");
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
